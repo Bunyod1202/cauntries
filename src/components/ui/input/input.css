@@ -1,0 +1,29 @@
+input {
+  width: 100%;
+   padding: 18px 18px 18px 74px;
+   border: 0;
+   background-color:#fff ;
+ }
+ .input { 
+   max-width: 480px;  
+   margin-top: 48px;
+   margin-bottom: 48px;
+ position: relative;
+ }
+ .input::before {
+ content: "";
+ width: 18px;
+ height: 18px;
+ display: block;
+ position: absolute;
+ top: 18px;
+ left: 25px;
+ background-image: url("../../../assets/images/search.svg");
+ background-repeat: no-repeat;
+ }
+  input::placeholder {
+   font-weight: 400;
+   font-size: 14px;
+   line-height: 20px;
+   color: #202C36;
+ }

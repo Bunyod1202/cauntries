@@ -1,0 +1,19 @@
+.header-inner .btn {
+  background-color:transparent ;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 22px;
+  color: #202C36;
+  border: 0;
+  display: flex;
+  align-items: center;
+}
+.header-inner .btn::before {
+  content: "";
+  display: inline-block;
+  width: 17px;
+  height: 17px;
+  background-image: url("../../../assets/images/month.svg");
+  margin-right: 10px;
+
+}
