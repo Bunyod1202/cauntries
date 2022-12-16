@@ -30,15 +30,16 @@ function App() {
           isLoading: false,
           data: json
         })
-        
+        console.log(json)
+        if (json.status === 404) {
+          setFlags({
+            isError: true,
+            isLoading: false,
+            data: []
+         })
+        }
       })
-      .catch(error => {
-        setFlags({
-          isError: true,
-          isLoading: false,
-          data: []
-       })
-      })
+      .catch(error => { })
   }, [search])
   
   useEffect(() => {
@@ -50,14 +51,16 @@ function App() {
           isLoading: false,
           data: json
         })
-       
+        if (json.status === 404) {
+          setFlags({
+            isError: true,
+            isLoading: false,
+            data: []
+          })
+        }
       })
       .catch(error => {
-        setFlags({
-          isError: true,
-          isLoading: false,
-          data: []
-      })
+        
       })
   }, [select])
 
@@ -66,8 +69,8 @@ function App() {
       <Header />
       <main>
         <Form selects={selects} searchs={searchs} />
-        {flags.isLoading  && <p>Loading...</p>}
-        {flags.isError && <p>Something went wrong</p>}
+        {flags.isLoading  && <p className="le">Loading...</p>}
+        {flags.isError && <p className="le">Something went wrong</p>}
         {flags.data.length > 0 && <CardGroup flags={flags.data} />}
       </main>
     </div>

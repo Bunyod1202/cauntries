@@ -379,3 +379,8 @@ body{
 .site-main{
   flex-grow: 1;
 }
+.le {
+  text-align: center;
+  font-size: 30px;
+  font-weight:bold;
+}
