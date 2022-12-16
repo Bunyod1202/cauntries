@@ -1,19 +1,21 @@
-import React from 'react';
-import Input from '../ui/input/Input';
+
+import {Input} from '../ui/input/Input';
 import Select from '../ui/select/Select';
 import './form.css'
 
-const Form = () => {
+const Form = ({searchs,selects}) => {
+  
+
   return (
     <section className="hero">
       <div className="container">
-        <form>
+        <form onSubmit={(e)=> e.preventDefault()}>
           <div className="row">
             <div className="col-12 col-sm-12 col-md-9  col-xl-10">
-              <Input />
+              <Input type="search" onKeyDown={(e)=>searchs(e)} placeholder="Search for a country…"/>
             </div>
             <div className="col-12 col-sm-12 col-md-3 col-xl-2" >
-              <Select />
+              <Select onChange={(e)=>selects(e.target.value)} className="select" name="user-country" />
             </div>
           </div>
         </form>

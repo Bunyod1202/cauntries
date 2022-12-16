@@ -1,12 +1,12 @@
-import React from 'react';
+
 import './input.css'
 
-const Input = () => {
+export const Input = (props) => {
   return (
     <div className="input">
-      <input  type="search" placeholder="Search for a country…"/>
+      <input {...props}  />
     </div>
   );
 };
 
-export default Input;
+ 
