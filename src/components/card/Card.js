@@ -1,10 +1,11 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const Card = ({ img,name,population,region,capital}) => {
   return (
-    <div className="col-12 col-sm-6 col-md-6 col-xl-3 p-0">
+    <div key={name} className="col-12 col-sm-6 col-md-6 col-xl-3 p-0">
       <div className="flag-item">
-        <a href="/">
+        <Link to={`/${name}`}>
           <div className="ftag-item-top">
             <img className='card-img-top card-img' src={img} width="264" height="200" alt="flag"/>
           </div>
@@ -14,7 +15,7 @@ const Card = ({ img,name,population,region,capital}) => {
             <p className="text"> <span>Region:</span> {region}</p>
             <p className="text"> <span>Capital:</span> {capital}</p>
           </div>
-        </a>
+        </Link>
       </div>
     </div> 
   );

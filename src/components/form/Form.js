@@ -3,7 +3,7 @@ import {Input} from '../ui/input/Input';
 import Select from '../ui/select/Select';
 import './form.css'
 
-const Form = ({searchs,selects}) => {
+export const Form = ({searchs,selects}) => {
   
 
   return (
@@ -23,5 +23,3 @@ const Form = ({searchs,selects}) => {
     </section>
   );
 };
-
-export default Form;

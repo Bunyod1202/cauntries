@@ -116,6 +116,7 @@ border-radius: 6px;
 padding: 10px 39px;
 display:inline-block;
 color: #202C36;
+display:flex ;
 }
 .btn-back .bi {
   margin-right: 10px;
