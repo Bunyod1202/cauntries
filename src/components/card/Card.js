@@ -5,7 +5,7 @@ const Card = ({ img,name,population,region,capital}) => {
   return (
     <div key={name} className="col-12 col-sm-6 col-md-6 col-xl-3 p-0">
       <div className="flag-item">
-        <Link to={`/${name}`}>
+        <Link to={`/card/${name}`}>
           <div className="ftag-item-top">
             <img className='card-img-top card-img' src={img} width="264" height="200" alt="flag"/>
           </div>

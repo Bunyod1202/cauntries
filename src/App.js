@@ -2,7 +2,9 @@ import { Route, Routes } from "react-router-dom";
 import Header from "./components/header/Header";
 import "./main.css"
 import { CardId } from "./pages/CardId";
-import {Home} from "./pages/Home";
+import { Errors } from "./pages/Error";
+import { Home } from "./pages/Home";
+
 function App() {
  
 
@@ -11,7 +13,8 @@ function App() {
       <Header />
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/:id" element={<CardId/>} />
+        <Route path="/card/:id" element={<CardId/>} />
+        <Route path="/*" element={<Errors/>} />
 
       </Routes>
     </div>
