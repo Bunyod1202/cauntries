@@ -1,9 +1,9 @@
 import React from 'react';
 import './button.css'
 
-const Button = () => {
+const Button = (props) => {
   return (
-    <button className="btn">Dark Mode</button>
+    <button {...props}>{props.children}</button>
   );
 };
 

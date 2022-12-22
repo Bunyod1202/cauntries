@@ -1,5 +1,5 @@
 .header { 
-  background-color: #ffffff;
+  background-color: var( --main-color-white);
 }
 .header-inner {
   display: flex;
@@ -10,7 +10,10 @@
   font-weight: 800;
   font-size: 24px;
   line-height: 33px;
-  color: #202C36;
+  color:  var(--main-color-text);
   margin: 0;
 }
 
+.selext-box {
+  width: 80px;
+}

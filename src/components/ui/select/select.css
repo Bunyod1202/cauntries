@@ -1,8 +1,8 @@
  .select {
-  color: #202C36;
+  color:  var(--main-color-text);
   width: 100%;
     padding: 18px 24px;
-    background-color: #fff;
+    background-color: var( --main-color-white);
     box-shadow: 0px 2px 9px rgba(0, 0, 0, 0.0532439);
     border-radius: 5px;
     border: 0;
@@ -36,11 +36,11 @@
    .select option {
   height: 20px;
   border: 0;
-  color: #202C36;
+  color: var(--main-color-text);
   font-weight: 400;
   font-size: 14px;
   line-height: 20px;
-  background-color:#fff;
+  background-color:var( --main-color-white);
   box-shadow: 0px 2px 9px #0000000e;
   border-radius: 5px;
   }

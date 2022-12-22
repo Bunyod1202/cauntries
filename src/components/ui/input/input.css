@@ -2,7 +2,7 @@ input {
   width: 100%;
    padding: 18px 18px 18px 74px;
    border: 0;
-   background-color:#fff ;
+   background-color:var( --main-color-white) ;
  }
  .input { 
    max-width: 480px;  
@@ -25,5 +25,5 @@ input {
    font-weight: 400;
    font-size: 14px;
    line-height: 20px;
-   color: #202C36;
+   color:  var(--main-color-text);
  }

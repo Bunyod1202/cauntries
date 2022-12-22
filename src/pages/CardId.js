@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import { useTranslation } from 'react-i18next';
 import { useNavigate, useParams } from 'react-router-dom';
 
 export const CardId = () => {
@@ -9,7 +10,7 @@ export const CardId = () => {
     isLoading: true,
     data:[]
   })
-
+  const { t } = useTranslation();
 
   useEffect(() => {
     fetch(`https://restcountries.com/v3.1/name/${params.id}`)
@@ -46,7 +47,7 @@ export const CardId = () => {
                   <path
                     fillRule="evenodd"
                     d="M15 8a.5.5 0 0 0-.5-.5H2.707l3.147-3.146a.5.5 0 1 0-.708-.708l-4 4a.5.5 0 0 0 0 .708l4 4a.5.5 0 0 0 .708-.708L2.707 8.5H14.5A.5.5 0 0 0 15 8z" />
-                </svg>Back
+                </svg>{t("back")}
               </button>
            </div>
            {flag.data.map(item =>
@@ -63,29 +64,29 @@ export const CardId = () => {
               <ul className="list">
                 <li className="list-item">
                         <p>
-                          Native Name: <span>{item.name.official}</span>
+                          {t("nativeName")}: <span>{item.name.official}</span>
                         </p>
                         <p>
-                        Population: <span>{item.population}</span>
+                        {t("population")}: <span>{item.population}</span>
                         </p>
                         <p>
-                    Region: <span>{item.region}</span>
+                    {t("region")}: <span>{item.region}</span>
                         </p>
-                       <p>Sub Region: <span>{item.subregion}</span>
+                       <p>{t("subRegion")}: <span>{item.subregion}</span>
                         </p>
                         <p>
-                    Capital: <span>{item.capital}</span>
+                    {t("capital")}: <span>{item.capital}</span>
                         </p>
           
                 </li>
                 <li className="list-item">
-                  <p>Top Level Domain: <span>{item.tld[0]}</span></p>
-                  <p> Currencies: <span>{Object.keys(item.currencies)}</span></p>
-                  <p>Languages: <span>{Object.values(item.languages)+","}</span></p>    
+                  <p>{t("topLevelDomain")}: <span>{item.tld[0]}</span></p>
+                  <p> {t("currencies")}: <span>{Object.keys(item.currencies)}</span></p>
+                  <p>{t("languages")}: <span>{Object.values(item.languages)+","}</span></p>    
                 </li>
               </ul>
               <div className="btn-groups">
-                <span>Border Countries: </span>
+                <span>{t("borderCountries")}: </span>
                       <div className="button">
                         {item?.borders?.map(border =>   <button key={border} className="btn">{border}</button>)}
 

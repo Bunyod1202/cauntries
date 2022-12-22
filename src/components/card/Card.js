@@ -1,7 +1,9 @@
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 import { Link } from 'react-router-dom';
 
-const Card = ({ img,name,population,region,capital}) => {
+const Card = ({ img, name, population, region, capital }) => {
+  const { t } = useTranslation();
   return (
     <div key={name} className="col-12 col-sm-6 col-md-6 col-xl-3 p-0">
       <div className="flag-item">
@@ -11,9 +13,9 @@ const Card = ({ img,name,population,region,capital}) => {
           </div>
           <div className="ftag-item-bottom">
             <h2 className="title">{name}</h2>
-            <p className="text"> <span>Population:</span> {population}</p>
-            <p className="text"> <span>Region:</span> {region}</p>
-            <p className="text"> <span>Capital:</span> {capital}</p>
+            <p className="text"> <span>{t("population")}:</span> {population}</p>
+            <p className="text"> <span>{t("region")}:</span> {region}</p>
+            <p className="text"> <span>{t("capital")}:</span> {capital}</p>
           </div>
         </Link>
       </div>

@@ -337,6 +337,20 @@ template {
 [hidden] {
   display: none;
 }
+:root {
+  --main-color-white:#fff;
+  --main-color-text:#111517;
+  --main-card-color-dark:#2B3844;
+  --body-color: #EDF3F8
+  }
+  .black {
+    --main-color-white:#2B3844;
+  --main-color-text:#ffffff;
+  --main-card-color-dark:#111517;
+  --body-color: #202C36;
+  background-color: #202C36
+  }
+
 *{
   box-sizing: border-box;
   margin: 0;
@@ -362,13 +376,12 @@ img , svg{
 a {
   display: inline-block;
   text-decoration: none;
-  color: #000;
+  color: var(--main-color-text);
 }
 body{
   font-family: "Public", "Arial", sans-serif;
   font-weight: 400;
-  background-color: 
-  #EDF3F8;
+  background-color: var(--body-color);
 }
 .container {
   max-width: 1320px;
@@ -402,7 +415,7 @@ body{
   top: 90%;
   border: none;
   border-radius: 8px;
-  background-color: #0E132C;
-  color: #fff;
+  background-color: var(--main-color-text);
+  color: var( --main-color-white);
   padding: 10px;
 }

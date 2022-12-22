@@ -3,7 +3,7 @@
   font-weight: 600;
   font-size: 16px;
   line-height: 22px;
-  color: #202C36;
+  color:  var(--main-color-text);
   border: 0;
   display: flex;
   align-items: center;
